@@ -1,0 +1,18 @@
+syntax = "proto3";
+package emiter;
+
+option go_package = "github.com/GurbanowGadam/emiterService";
+
+service EmiterService {
+    rpc EmitUserBlocked(UserBlockedRequest) returns (UserBlockedResponse);
+}
+
+message UserBlockedRequest {
+    string UserUUID = 1;
+    string BlockedUserUUID = 2;
+    string Type = 3;
+}
+
+message UserBlockedResponse {
+
+}
